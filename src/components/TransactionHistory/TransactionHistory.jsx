@@ -1,16 +1,21 @@
 import PropTyre from 'prop-types';
 import { TransactionHistoryTable } from './TransactionHistoryTable';
+import {
+  TransactionHistoryTableStyle,
+  TableHead,
+  TableHeadTH,
+} from './TransactionHistory.styled';
 
 export const TransactionHistory = ({ items }) => {
   return (
-    <table className="transaction-history">
-      <thead>
+    <TransactionHistoryTableStyle>
+      <TableHead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <TableHeadTH>Type</TableHeadTH>
+          <TableHeadTH>Amount</TableHeadTH>
+          <TableHeadTH>Currency</TableHeadTH>
         </tr>
-      </thead>
+      </TableHead>
 
       <tbody>
         {items.map(item => (
@@ -22,7 +27,7 @@ export const TransactionHistory = ({ items }) => {
           />
         ))}
       </tbody>
-    </table>
+    </TransactionHistoryTableStyle>
   );
 };
 

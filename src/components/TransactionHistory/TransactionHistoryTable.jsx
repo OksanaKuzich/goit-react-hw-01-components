@@ -1,12 +1,13 @@
 import PropType from 'prop-types';
+import { TableDateTd, TableDateTr } from './TransactionHistory.styled';
 
 export const TransactionHistoryTable = ({ type, amount, currency }) => {
   return (
-    <tr>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
+    <TableDateTr>
+      <TableDateTd>{type}</TableDateTd>
+      <TableDateTd>{amount}</TableDateTd>
+      <TableDateTd>{currency}</TableDateTd>
+    </TableDateTr>
   );
 };
 
