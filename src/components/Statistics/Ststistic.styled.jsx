@@ -1,20 +1,20 @@
 import styled from '@emotion/styled';
 
 export const StatisticsContainer = styled.section`
-  margin-top: 30px;
+  margin-top: ${p => p.theme.space[5]}px;
   margin-left: auto;
   margin-right: auto;
   width: 280px;
 `;
 
 export const Title = styled.h2`
-  padding-top: 20px;
-  padding-bottom: 20px;
+  font-size: ${p => p.theme.fontSizes.m}px;
+  color: ${p => p.theme.colors.text};
+  background-color: ${p => p.theme.colors.card};
+  padding-top: ${p => p.theme.space[4]}px;
+  padding-bottom: ${p => p.theme.space[4]}px;
   text-align: center;
-  font-size: 16px;
   text-transform: uppercase;
-  color: #575555;
-  background-color: #fff;
 `;
 
 export const StatList = styled.ul`
@@ -22,23 +22,23 @@ export const StatList = styled.ul`
 `;
 
 export const StatisticListItem = styled.li`
-  padding-top: 10px;
-  padding-bottom: 10px;
+  color: ${p => p.theme.colors.card};
+  background-color: ${props => getDarkColor()};
+  padding-top: ${p => p.theme.space[3]}px;
+  padding-bottom: ${p => p.theme.space[3]}px;
   display: flex;
   flex-direction: column;
   width: 56px;
   text-align: center;
-  color: white;
-  background-color: ${props => getDarkColor()};
 `;
 
 export const StatisticListLabel = styled.span`
-  font-size: 12px;
+  font-size: ${p => p.theme.fontSizes.xs}px;
 `;
 
 export const StatisticListPercentage = styled.span`
-  margin-top: 5px;
-  font-size: 16px;
+  margin-top: ${p => p.theme.space[2]}px;
+  font-size: ${p => p.theme.fontSizes.m}px;
 `;
 
 function getDarkColor() {

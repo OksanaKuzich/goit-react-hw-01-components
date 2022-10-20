@@ -1,35 +1,37 @@
 import styled from '@emotion/styled';
 
 export const FriendListUl = styled.ul`
-  margin: 30px auto 0 auto;
+  margin-top: ${p => p.theme.space[5]}px;
+  margin-left: auto;
+  margin-right: auto;
   width: 210px;
 `;
 
 export const FriendListItemStyle = styled.li`
-  padding: 5px 10px;
+  padding: ${p => p.theme.space[3]}px;
+  background-color: ${p => p.theme.colors.card};
+  box-shadow: 0 10px 10px -5px rgb(0 0 0 / 30%);
   display: flex;
   align-items: center;
-  background-color: white;
-  box-shadow: 0 10px 10px -5px rgb(0 0 0 / 30%);
 
   :not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: ${p => p.theme.space[3]}px;
   }
 `;
 
 export const Status = styled.span`
-  margin-right: 5px;
+  margin-right: ${p => p.theme.space[2]}px;
+  border-radius: ${p => p.theme.radii.round};
+  background-color: ${p => (p.status ? 'green' : 'red')};
   width: 10px;
   height: 10px;
-  border-radius: 50%;
-  background-color: ${props => props.type ? 'green' : 'red'};
 `;
 
 export const FriendAvatar = styled.img`
+  margin-right: ${p => p.theme.space[2]}px;
   width: 48px;
-  margin-right: 5px;
 `;
 
 export const FriendName = styled.p`
-  font-size: 18px;
+  font-size: ${p => p.theme.fontSizes.m}px;
 `;

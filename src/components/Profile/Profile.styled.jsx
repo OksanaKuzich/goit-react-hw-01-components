@@ -1,21 +1,22 @@
 import styled from '@emotion/styled';
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-top: 30px;
+  border: ${p => p.theme.borders.normal};
+  border-color: ${p => p.theme.colors.textDark};
+  margin-top: ${p => p.theme.space[5]}px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
   width: 210px;
-  border: 1px solid black;
 `;
 
 export const Description = styled.div`
+  background-color: ${p => p.theme.colors.card};
   padding-top: 20px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #fff;
 `;
 
 export const Avatar = styled.img`
@@ -26,52 +27,52 @@ export const Avatar = styled.img`
 `;
 
 export const Name = styled.p`
-  font-weight: bold;
-  margin-top: 15px;
+  font-weight: ${p => p.theme.fontWeigth.bold};
+  margin-top: ${p => p.theme.space[4]}px;
 `;
 
 export const Tag = styled.p`
-  color: #575555;
-  font-size: 14px;
-  margin-top: 5px;
+  color: ${p => p.theme.colors.text};
+  font-size: ${p => p.theme.fontSizes.s}px;
+  margin-top: ${p => p.theme.space[2]}px;
 `;
 
 export const Location = styled.p`
-  color: #575555;
-  font-size: 14px;
-  margin-top: 5px;
-  margin-bottom: 15px;
+  color: ${p => p.theme.colors.text};
+  font-size: ${p => p.theme.fontSizes.s}px;
+  margin-top: ${p => p.theme.space[2]}px;
+  margin-bottom: ${p => p.theme.space[4]}px;
 `;
 
 export const Stats = styled.ul`
-  color: #575555;
+  color: ${p => p.theme.colors.text};
+  background-color: ${p => p.theme.colors.cardAccent};
   display: flex;
-  background-color: #facfcf;
-  /* text-align: stretch; */
-  /* justify-content: center; */
 `;
 
 export const Item = styled.li`
-  color: #575555;
+  color: ${p => p.theme.colors.text};
+  font-size: ${p => p.theme.fontSizes.xs}px;
+  padding-top: ${p => p.theme.space[4]}px;
+  padding-bottom: ${p => p.theme.space[4]}px;
+  border-top: ${p => p.theme.borders.normal};
+  border-color: ${p => p.theme.colors.textDark};
   display: flex;
   flex-direction: column;
   text-align: center;
   width: calc(210px / 3);
-  font-size: 12px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  border-top: 1px solid black;
 
   :not(:last-child) {
-    border-right: 1px solid black;
+    border-right: ${p => p.theme.borders.normal};
+    border-color: ${p => p.theme.colors.textDark};
   }
 `;
 
 export const Label = styled.span`
-  margin-bottom: 2px;
+  margin-bottom: ${p => p.theme.space[1]}px;
 `;
 
 export const Quantity = styled.span`
-  font-weight: bold;
-  color: black;
+  font-weight: ${p => p.theme.fontWeigth.bold};
+  color: ${p => p.theme.colors.textDark};
 `;
